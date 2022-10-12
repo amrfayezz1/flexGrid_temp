@@ -1,0 +1,120 @@
+/* general styling */
+*{
+    padding: 0;
+    margin: 0;
+    color: #333;
+    text-transform: capitalize;
+    font-size: large;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* nav */
+.cont{
+    border-bottom: 2px solid #eee;
+}
+
+nav{
+    padding: 20px 20px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+}
+nav div{
+    width: 10%;
+    display: inline;
+}
+nav div img{
+    width: 35px;
+    border-radius: 50%;
+}
+
+ul{
+    display: inline-flex;
+    width: 80%;
+    margin: 0 auto;
+    padding-left: 0;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+li{
+    list-style: none;
+    margin-right: 10px;
+}
+a{
+    text-decoration: none;
+    color: #999;
+}
+
+.pp{
+    position: absolute;
+    right: 0;
+}
+
+/* header */
+.header{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: x-large;
+}
+.header p{
+    width: 350px;
+    font-size: medium;
+}
+
+/* cards */
+.cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.left, .right{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    width: calc(50% - 20px);
+}
+.single{
+    height: 200px;
+}
+.left .wide, .right .wide{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    height: 300px;
+}
+.wide div{
+    width: calc(50% - 10px);
+}
+.ev{
+    padding: 20px;
+    background-color: #424ede;
+    border-radius: 10px;
+    position: relative;
+}
+.ev *{
+    color: white;
+}
+.ev button{
+    position: absolute;
+    bottom: 10px;
+    color: #5286fa;
+}
+
+@media(max-width:767px){
+    .cards{
+        flex-direction: column;
+    }
+    .left, .right{
+        width: fit-content;
+    }
+    .header p{
+        width: 310px;
+    }
+}
